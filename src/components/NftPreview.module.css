@@ -1,0 +1,136 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-background: hsl(217, 54%, 11%);
+  --card-background: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "outfit";
+  src: url("../fonts/outfit.ttf");
+}
+
+.container {
+  width: 300px;
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: 20px;
+}
+
+.imageContainer {
+  position: relative;
+  background-color: var(--cyan);
+  border-radius: 10px;
+}
+
+.nft {
+  transition: 0.5s ease;
+  opacity: 1;
+  display: block;
+  backface-visibility: hidden;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.viewIcon {
+  height: 40px;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imageContainer:hover {
+  cursor: pointer;
+}
+
+.imageContainer:hover .nft {
+  opacity: 0.5;
+}
+
+.imageContainer:hover .viewIcon {
+  opacity: 1;
+}
+
+.detailsContainer {
+  font-family: "outfit";
+}
+
+.detailsContainer h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.detailsContainer h1:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.detailsContainer p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eth, .days{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eth p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cyan);
+  margin-left: 10px;
+}
+
+.days p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+hr {
+  border: 1px solid var(--line);
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userContainer img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--white);
+  border-radius: 100px;
+}
+
+.creationOf {
+  font-size: 14px;
+  color: var(--soft-blue);
+  margin-left: 10px;
+}
+
+.userName {
+  font-size: 14px;
+  color: var(--white);
+  margin-left: 10px;
+}
+
+.userName:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
